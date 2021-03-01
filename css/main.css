@@ -1,0 +1,924 @@
+:root {
+  --font-primary: poynter-oldstyle-display, serif;
+  --font-secondary: termina, sans-serif;
+  --font-third: 'Spartan', sans-serif;
+  --color-primary: #537BFF;
+  --color-navy: #2C365A;
+  --color-gray: #383838;
+  --color-light-gray: #F7F7F7;
+  --pbl-color: #D8F3FE;
+  --quilt-color: #FAD7D6;
+  --parkinsons-color: #E4F5EF;
+  --canimmunize-color: #DDECF5;
+  --cangeo-color: #DEF2F5;
+  --cm-color: #F3EFFA;
+  --hds-color: #FDE9CE;
+}
+
+html {
+  font-family: var(--font-primary);
+  scroll-behavior: smooth;
+}
+
+/* Spacing */
+
+.my-max-length {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 28em;
+  width: 100%;
+}
+
+.my-wrapper {
+  max-width: 30em;
+  margin: 0 auto;
+}
+
+.my-padding {
+  padding-top: 6.5rem;
+  padding-bottom: 6.5rem;
+}
+
+.my-small-padding {
+  padding-top: 2.75rem;
+  padding-bottom: 2.75rem;
+}
+
+.my-padding-bottom {
+  padding-bottom: 6.5rem;
+}
+
+.my-padding-top {
+  padding-top: 5rem;
+}
+
+/* Typography */
+
+p {
+  line-height: 2;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+.base-sans {
+  font-family: var(--font-primary);
+}
+
+.sans-serif {
+  font-family: var(--font-secondary);
+}
+
+.regular {
+  font-weight: 300;
+}
+
+.semibold {
+  font-weight: 600;
+}
+
+.black {
+  font-weight: 900;
+}
+
+.no-decoration {
+  text-decoration: none;
+}
+
+.this {
+  line-height: 1;
+}
+
+.third {
+  font-family: var(--font-third);
+  line-height: 2.25;
+}
+
+.case-study-text {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* Colours */
+
+.primary {
+  color: var(--color-primary);
+}
+
+.white {
+  color: #ffffff;
+}
+
+.navy {
+  color: var(--color-navy);
+}
+
+.blue {
+  color: var(--color-blue);
+}
+
+.yellow {
+  color: var(--color-yellow);
+}
+
+.beige {
+  color: var(--color-beige);
+}
+
+.gray {
+  color: var(--color-gray);
+}
+
+.quilt-color {
+  color: var(--quilt-color);
+}
+
+.cangeo-color {
+  var(--cangeo-color);
+}
+
+.cm-color {
+  color: var(--cm-color);
+}
+
+.parkinsons-color {
+  color: var(--parkinsons-color);
+}
+
+/* Backgrounds */
+
+.section-gray {
+  background-color: var(--color-light-gray);
+}
+
+.section-navy {
+  background-color: var(--color-navy);
+}
+
+/* Figures */
+
+figure {
+  margin-bottom: 0;
+}
+
+figcaption {
+  font-style: italic;
+  color: #808080;
+}
+
+/* Navigation */
+
+.navigation {
+  padding: 1.3rem
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--color-navy);
+  transition: color .2s ease;
+  letter-spacing: 1px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: .3em;
+}
+
+nav a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-navy);
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+nav a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+nav a:hover {
+  color: var(--color-dark-blue);
+}
+
+.main-navigation ul li a {
+  font-family: var(--font-secondary);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* Buttons */
+
+.button {
+  background-color: #e2e2e2;
+  border: 1px solid #e2e2e2;
+  border-radius: 5px;
+  font-family: var(--font-primary);
+  text-decoration: none;
+  color: #fff;
+  padding: .4em 2.5em;
+}
+
+.btn-blue {
+  background-color: var(--color-dark-blue);
+}
+
+.enter-here-btn {
+  border: 1px solid var(--color-navy);
+  color: var(--color-navy);
+  text-decoration: none;
+  font-family: var(--font-secondary);
+  padding: 1.5em 2.5em 1.25em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background: linear-gradient(to right, #fff 50%, var(--color-navy) 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  transition: all .3s ease-in-out;
+}
+
+.enter-here-btn:hover {
+  background-position: right bottom;
+  color: #fff;
+}
+
+/* Hero Banner */
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  overflow: hidden;
+}
+
+.hero-section:before {
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-light-gray);
+  border-radius: 0 0 50% 50%;
+  transform: scaleX(1.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.pattern-box {
+  background-image: url('{{site.baseurl}}/images/pattern.jpg');
+  background-size: cover;
+  height: 100vh;
+}
+
+.banner-links {
+  bottom: 4rem;
+}
+
+.banner-sm {
+  font-family: var(--font-secondary);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all .3s ease;
+  position: relative;
+  padding-bottom: .3em;
+  margin: 0 1rem;
+}
+
+.first-banner-sm {
+  margin: 0 1rem 0 0;
+}
+
+.banner-sm:hover {
+  color: var(--color-blue);
+}
+
+.project-section {
+  height: 80vh;
+}
+
+.card {
+  height: 500px;
+}
+
+.card-text {
+  width: 100%;
+}
+
+.banner-sm:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-navy);
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.banner-sm:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.banner-sm:hover .btn-underline {
+  width: 60px;
+}
+
+.home-intro {
+  max-width: 30em;
+  margin: 0 auto;
+}
+
+.social-media-links {
+  background-color: var(--color-light-gray);
+}
+
+.social-media-link {
+  text-decoration: none;
+  font-family: var(--font-secondary);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--color-navy);
+  transition: all .15s ease-in-out;
+}
+
+.social-media-link:hover {
+  color: var(--color-dark-blue);
+}
+
+.copyright {
+  font-family: var(--font-primary);
+  color: #ACACAC;
+  font-weight: 300;
+}
+
+/*--------Project Cards----------*/
+
+.project-card {
+  width: 100%;
+  transition: all .2s ease-in-out;
+  /* margin-bottom: 1em; */
+}
+
+.project-card a {
+  text-decoration: none;
+}
+
+.portfolio-title {
+  line-height: 1;
+}
+
+.arrow-icon {
+  fill: var(--color-navy);
+  transition: all .2s ease-in-out;
+}
+
+.project-card:hover {
+  transform: scale(1.015);
+}
+
+.project-card:hover .arrow-icon {
+  transform: translateX(20%);
+}
+
+/*---------- Case Study Template -----------*/
+
+.case-study-header {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  overflow: hidden;
+}
+
+.case-study-header:before {
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 50% 50%;
+  transform: scaleX(1.5);
+}
+
+.case-study-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.banner-title {
+  line-height: 1;
+}
+
+.banner-text {
+  line-height: 2;
+  font-size: .9rem;
+}
+
+.tags {
+  font-family: var(--font-secondary);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.project-type {
+  font-family: Oswald;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.detail-title {
+  font-family: var(--font-secondary);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.details-list {
+  text-align: center;
+}
+
+.gray-background {
+  background-color: var(--color-light-gray);
+}
+
+.parkinsons-background-2 {
+  background-color: var(--parkinsons-color);
+}
+
+.parkinsons-background-3 {
+  background-color: #9eb7b1;
+}
+
+.parkinsons-green-background {
+  background-color: #9eb7b1;
+}
+
+.view-next {
+  font-family: var(--font-secondary);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.next-project-section {
+  width: 100%;
+}
+
+.next-project-text {
+  transition: all .6s ease-in-out;
+}
+
+.next-project-pbl,
+.next-project-parkinsons,
+.next-project-cm,
+.next-project-quilt {
+  transition: all .6s ease-in-out;
+}
+
+.next-project-pbl:hover {
+  background-color: var(--quilt-color);
+}
+
+.next-project-parkinsons:hover {
+  background-color: var(--canimmunize-color);
+}
+
+.next-project-cm:hover {
+  background-color: var(--color-canimmunize-color);
+}
+
+.next-project-quilt:hover {
+  background-color: var(--parkinsons-color);
+}
+
+.next-project-section:hover .next-project-text {
+  transform: scale(1.05);
+}
+
+/*---------- Project Big Life -----------*/
+.pbl-color {
+  color: var(--color-pbl-color);
+}
+
+.pbl-background {
+  background-color: var(--pbl-color);
+}
+
+.pbl-dark-background {
+  background-color: #65D0FA;
+}
+
+.case-study-header-pbl:before {
+  background-color: var(--pbl-color);
+}
+
+.project-intro {
+  font-family: var(--font-third);
+}
+
+.blue-drop-shadow {
+  filter: drop-shadow(5px 5px 30px #3A8BAA);
+}
+
+.gray-drop-shadow {
+  filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, .18));
+}
+
+.slide-in {
+  animation-name: slideInFromBottom;
+  animation-duration: .7s;
+  animation-timing-function: ease-in-out;
+}
+
+.pbl-bubbles {
+  background-image: url("{{site.baseurl}}/images/pbl/bubbles.png"), url("{{site.baseurl}}/images/pbl/slides.png");
+  background-size: cover, cover;
+  background-position: center;
+}
+
+.pbl-hover {
+  background:
+    linear-gradient(
+      to bottom, #65D0FA 0%, #65D0FA 100%
+    );
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 4px;
+  color: var(--color-navy);
+  transition: all .3s ease;
+}
+
+.pbl-hover:hover {
+  color: #fff;
+  background-size: 4px 50px;
+}
+
+.next-project-pbl {
+  background: linear-gradient(to right, var(--pbl-color) 50%, var(--cm-color) 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  transition: all .6s ease-in-out;
+}
+
+.next-project-pbl:hover {
+  background-position: right bottom;
+}
+
+/*---------- QUILT -----------*/
+
+.quilt-header-banner {
+  background-image: url('{{site.baseurl}}/images/quilt/quilt-banner.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+.quilt-background {
+  background-color: var(--quilt-color);
+}
+
+.case-study-header-quilt:before {
+  background-color: var(--quilt-color);
+}
+
+.quilt-banner-color {
+  background-color: var(--quilt-color);
+}
+
+.black-background {
+  background-color: #333132;
+}
+
+.w-60 {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.next-project-quilt {
+  background: linear-gradient(to right, var(--quilt-color) 50%, var(--cangeo-color) 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  transition: all .6s ease-in-out;
+}
+
+.next-project-quilt:hover {
+  background-position: right bottom;
+}
+
+
+/*---------- Parkinsons Network -----------*/
+
+.parkinsons-header-banner {
+  background-image: url('{{site.baseurl}}/images/parkinsons-banner.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+.parkinsons-card {
+  background-color: var(--color-yellow);
+}
+
+.parkinsons-color {
+  color: var(--parkinsons-color);
+}
+
+.parkinsons-background {
+  background-color: var(--color-yellow);
+}
+
+.w-80 {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/*---------- CANImmunize -----------*/
+
+.canimmunize-color {
+  color: var(--canimmunize-color);
+}
+
+.canimmunize-background {
+  background-color: var(--canimmunize-color);
+}
+
+.case-study-header-canimm:before {
+  background-color: var(--canimmunize-color);
+}
+
+.next-project-canimmunize {
+  background: linear-gradient(to right, var(--canimmunize-color) 50%, var(--hds-color) 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  transition: all .6s ease-in-out;
+}
+
+.next-project-canimmunize:hover {
+  background-position: right bottom;
+}
+
+.canimmunize-card {
+  background-color: var(--color-navy);
+}
+
+.canimm-hover {
+  background:
+    linear-gradient(
+      to bottom, #35527D 0%, #35527D 100%
+    );
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 4px;
+  color: #35527D;
+  transition: all .3s ease;
+}
+
+.canimm-hover:hover {
+  color: #fff;
+  background-size: 4px 50px;
+}
+
+/*The High Desert Sonnets*/
+.hds-color {
+  color: var(--hds-color);
+}
+
+.hds-background {
+  background-color: var(--hds-color);
+}
+
+.hds-dark-background {
+  background-color: #3B2516;
+}
+
+.case-study-header-hds:before {
+  background-color: var(--hds-color);
+}
+
+.hds-view-btn {
+  border: 1px solid var(--hds-color);
+  color: var(--color-navy);
+  text-decoration: none;
+  font-family: var(--font-secondary);
+  padding: 1.5em 2.5em 1.25em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background: linear-gradient(to right, #fff 50%, var(--hds-color) 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  transition: all .3s ease-in-out;
+}
+
+.hds-view-btn:hover {
+  background-position: right bottom;
+}
+
+.next-project-hds {
+  background: linear-gradient(to right, var(--hds-color) 50%, var(--quilt-color) 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  transition: all .6s ease-in-out;
+}
+
+.next-project-hds:hover {
+  background-position: right bottom;
+}
+
+
+/*Can Geo*/
+
+.cangeo-color {
+  color: var(--cangeo-color);
+}
+
+.cangeo-background {
+  background-color: var(--cangeo-color);
+}
+
+.cangeo-dark-background {
+  background-color: #35527D;
+}
+
+.cangeo-2-background {
+  background-color: #005d61;
+}
+
+.case-study-header-cangeo:before {
+  background-color: var(--cangeo-color);
+}
+
+.cangeo-hover {
+  background:
+    linear-gradient(
+      to bottom, #35527D 0%, #35527D 100%
+    );
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 4px;
+  color: #35527D;
+  transition: all .3s ease;
+}
+
+.cangeo-hover:hover {
+  color: #fff;
+  background-size: 4px 50px;
+}
+
+.next-project-cangeo {
+  background: linear-gradient(to right, var(--cangeo-color) 50%, var(--pbl-color) 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  transition: all .6s ease-in-out;
+}
+
+.next-project-cangeo:hover {
+  background-position: right bottom;
+}
+
+/*Creative Mornings*/
+.cm-color {
+  color: var(--cm-color);
+}
+
+.cm-background {
+  background-color: var(--cm-color);
+}
+
+.cm-dark-background {
+  background-color: #7F62AD;
+}
+
+.case-study-header-cm:before {
+  background-color: var(--cm-color);
+}
+
+.cm-hover {
+  background:
+    linear-gradient(
+      to bottom, #7F62AD 0%, #7F62AD 100%
+    );
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 4px;
+  color: var(--color-navy);
+  transition: all .3s ease;
+}
+
+.cm-hover:hover {
+  color: #fff;
+  background-size: 4px 50px;
+}
+
+.next-project-cm {
+  background: linear-gradient(to right, var(--cm-color) 50%, var(--parkinsons-color) 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  transition: all .6s ease-in-out;
+}
+
+.next-project-cm:hover {
+  background-position: right bottom;
+}
+
+/*Parkinsons Network*/
+
+.parkinsons-background {
+  background-color: var(--parkinsons-color);
+}
+
+.case-study-header-parkinsons:before {
+  background-color: var(--parkinsons-color);
+}
+
+.next-project-parkinsons {
+  background: linear-gradient(to right, var(--parkinsons-color) 50%, var(--canimmunize-color) 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  transition: all .6s ease-in-out;
+}
+
+.next-project-parkinsons:hover {
+  background-position: right bottom;
+
+
+/*Play*/
+
+.img-border {
+  border: 1px solid #e2e2e2;
+}
+
+/* Animations */
+
+@keyframes slideInFromBottom {
+
+  0% {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media only screen and (min-width:38em ) {
+
+  .project-details {
+    padding: 0 1em;
+  }
+
+}
+
+@media only screen and (min-width:41em ) {
+
+  .email {
+    text-align: left;
+  }
+
+  .credit {
+    text-align: center;
+  }
+
+}
+
+@media only screen and (min-width:43em ) {
+
+  .details-list {
+    text-align: left;
+  }
+
+  .details-list li {
+    margin-bottom: 0;
+    display: inline-block;
+    text-align: left;
+  }
+
+  .quilt-branding {
+    max-width: 75%;
+    margin: 0 auto;
+  }
+
+  .w-70-q {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
